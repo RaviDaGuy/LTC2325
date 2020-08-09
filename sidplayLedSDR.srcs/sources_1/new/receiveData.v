@@ -45,7 +45,7 @@ assign cnvO = cnv;//sends conversion signal to ADC
 
 reg[15:0] data_1;//register containing data received
 
-//github test   
+
 // store numbers into display
 // also clear module after displayed the result
 // also clear module after displayed the result
@@ -58,7 +58,7 @@ begin
         data_1[15:0] <= data_1[15:0];//otherwise, simply hold current register values
     end
     upcnt <= upcnt + 1;//increment upcount
-    if(upcnt == 18) begin//roll over
+    if(upcnt == 50) begin//roll over
         upcnt <= 0;
     end
 end
@@ -73,7 +73,7 @@ begin
     end else if(dncnt == 2)begin// on the third falling edge, the conversion goes low, increment counter
         dncnt <= dncnt + 1;
         cnv <= 0;
-    end else if(dncnt == 18)begin//roll over
+    end else if(dncnt == 50)begin//roll over
         dncnt <= 0;
         cnv <= 0;
     end else begin // catch case
