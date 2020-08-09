@@ -45,7 +45,7 @@ assign cnvO = cnv;//sends conversion signal to ADC
 
 reg[15:0] data_1;//register containing data received
 
-   
+//github test   
 // store numbers into display
 // also clear module after displayed the result
 // also clear module after displayed the result
