@@ -69,7 +69,6 @@ begin
     
     if(dncnt == 0) begin//first downcount of the cycle pulls conversion high
         cnv <= 1;
-        dncnt <= 0;
         dncnt <= dncnt + 1;
     end else if(dncnt == 2)begin// on the third falling edge, the conversion goes low, increment counter
         dncnt <= dncnt + 1;
